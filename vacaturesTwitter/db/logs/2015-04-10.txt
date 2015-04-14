@@ -1,0 +1,19 @@
+Time : 16:15:34
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.id' in 'where clause'
+Raw SQL : select *  from jobs_searchwords 
+						where c.id='2' order by id limit 1
+
+Time : 15:47:29
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.jobs_category_id' in 'on clause'
+Raw SQL : select max(id_tweet_string) as max_id  from jobs a left join jobs_category b 
+				on a.jobs_searchwords_id=b.id
+				 left join jobs_category c on b.jobs_category_id = c.id
+				where c.id='1' limit 1
+
+Time : 14:29:25
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jobs_category_id' in 'where clause'
+Raw SQL : select max(id_tweet_string) as max_id  from jobs where jobs_category_id='1' limit 1
+
+Time : 14:28:10
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jobs_category_id' in 'where clause'
+Raw SQL : select max(id_tweet_string) as max_id  from jobs where jobs_category_id='Array' limit 1

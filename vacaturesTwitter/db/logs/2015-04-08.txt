@@ -1,0 +1,35 @@
+Time : 17:19:22
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO jobs(source_name,title,description,link_url,link_image,user_name,
+							user_description,user_location,create_date,id_tweet,id_tweet_string,user_link
+							) 
+							VALUES(:source_name,:title,:description,:link_url,:link_image,:user_name,
+							:user_description,:user_location,:create_date,:id_tweet,:id_tweet_string,user_link							
+							)
+
+Time : 17:18:18
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO jobs(source_name,title,description,link_url,link_image,user_name,
+							user_description,user_location,create_date,id_tweet,id_tweet_string,user_link
+							) 
+							VALUES(:source_name,:title,:description,:link_url,:link_image,:user_name,
+							:user_description,:user_location,:create_date,:id_tweet,:id_tweet_string,user_link							
+							)
+
+Time : 17:17:09
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO jobs(source_name,title,description,link_url,link_image,user_name,
+							user_description,user_location,create_date,id_tweet,id_tweet_string,user_link
+							) 
+							VALUES(:source_name,:title,:description,:link_url,:link_image,:user_name,
+							:user_description,:user_location,:create_date,:id_tweet,:id_tweet_string,user_link							
+							)
+
+Time : 17:11:45
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO jobs(source_name,title,description,link_url,link_image,user_name,
+							user_description,user_location,create_date,id_tweet,id_tweet_string,user_link
+							) 
+							VALUES(:source_name,:title,:description,:link_url,:link_image,:user_name,
+							:user_description,:user_location,:create_date,:id_tweet,:id_tweet_string,user_link							
+							)

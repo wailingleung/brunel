@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?php if (isset($meta['title'])) { ?><?php echo $meta['title']; ?><?php } else { ?>Dutch Frontiers Blog<?php } ?></title>
+    <meta charset="UTF-8">
+    <meta name="description" content="<?php if (isset($meta['description'])) { ?><?php echo substr($meta['description'], 0, 255); ?><?php } else { ?>Blog<?php } ?>">
+    <meta name="keywords" content="Dutch Frontiers,Blog">
+    <meta name="author" content="Dutch Frontiers">
+    <link rel="stylesheet" type="text/css"  href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css"/>
+</head>
+<body>
+<?php echo $this->getContent(); ?>
+</body>
+</html>

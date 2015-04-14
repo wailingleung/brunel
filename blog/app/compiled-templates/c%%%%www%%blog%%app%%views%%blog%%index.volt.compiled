@@ -1,0 +1,5 @@
+<?php foreach ($blogItems as $item) { ?>
+    <?php echo date('d-m-Y', strtotime($item->blogInsertDate)); ?> - <a href="/blogitem/<?php echo $item->blogId; ?>"><?php echo $item->blogTitle; ?></a>  <br>
+    Geschreven door: <?php echo $item->blogAuthor; ?>
+    <br> <br>
+<?php } ?>

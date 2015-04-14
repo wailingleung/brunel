@@ -1,0 +1,34 @@
+<?php foreach ($blogItem as $item) { ?>
+    <h1><?php echo $item->blogTitle; ?></h1>
+    <?php echo date('d-m-Y', strtotime($item->blogInsertDate)); ?><br>
+    <?php echo $item->blogDescription; ?><br>
+    Geschreven door: <?php echo $item->blogAuthor; ?><br>
+    <br>
+    <?php if (isset($commentSaved)) { ?>
+        Commentaar is opgeslagen.
+    <?php } elseif (isset($messages)) { ?>
+        <?php foreach ($messages as $message) { ?>
+            <?php echo $message; ?><br>
+        <?php } ?>
+    <?php } ?>
+
+    <form action="/blogitem/<?php echo $item->blogId; ?>" method="post">
+        <input type="hidden" name="blogId" value="<?php echo $item->blogId; ?>">
+        Naam: <input type="text" name="blogCommentAuthor" value="<?php if (isset($postValue['blogCommentAuthor'])) { ?><?php echo $postValue['blogCommentAuthor']; ?><?php } ?>"><br>
+        Reactie: <textarea name="blogComment"><?php if (isset($postValue['blogCommentAuthor'])) { ?><?php echo $postValue['blogComment']; ?><?php } ?></textarea><br>
+        <input type="submit" value="Verzenden">
+    </form>
+<?php } ?>
+<br>
+
+<h2><?php echo $this->length($blogComments); ?> reacties</h2>
+<?php if ($this->length($blogComments) > 0) { ?>
+    <?php foreach ($blogComments as $itemComment) { ?>
+        <?php echo date('d-m-Y', strtotime($itemComment->blogCommentInsertDate)); ?><br>
+        <?php echo $itemComment->blogComment; ?><br>
+        Geschreven door: <?php echo $itemComment->blogCommentAuthor; ?><br><br>
+    <?php } ?>
+<?php } ?>
+
+
+
